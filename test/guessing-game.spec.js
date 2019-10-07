@@ -8,32 +8,32 @@ describe('#guess', () => {
         const game = new GuessingGame();
         game.setRange(0, 4048)
 
-        let result = game.guess();
-        game.lower();
-        result = game.guess();
-        game.lower();
-        result = game.guess();
-        game.lower();
-        result = game.guess();
+        let result = game.guess();// 2024
+        game.lower(); 
+        result = game.guess();// 1012
+        game.lower(); 
+        result = game.guess();// 506
+        game.lower(); 
+        result = game.guess();// 253
         game.greater();
-        result = game.guess();
+        result = game.guess();// 380
         game.greater();
-        result = game.guess();
+        result = game.guess();//443
         game.lower();
-        result = game.guess();
+        result = game.guess();//412
         game.lower();
-        result = game.guess();
+        result = game.guess();//396
         game.greater();
-        result = game.guess();
+        result = game.guess();//404
         game.greater();
-        result = game.guess();
+        result = game.guess();//408
         game.greater();
-        result = game.guess();
+        result = game.guess();//410
         game.lower();
-        result = game.guess();
+        result = game.guess();//409
 
         expect(result).to.equal(number);
-    });
+    }); 
 
     it('should guess number 279 with max value 3445', () => {
         const number = 279;
